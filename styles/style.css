@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../photos/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+img {
+  position: relative;
+  z-index: 10; 
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
+  height: 700px;
+  left: 70%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  animation: slideReverse 10s linear infinite;
+  height: 150px;
+}
+
+@keyframes slideReverse {
+  0% {
+    right: -200px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    right: 100vw;
+    opacity: 0;
+  }
+}
+
+.floating-2 {
+  animation: float-2 3s ease-in-out infinite;
+  height: 200px;
+ }
+
+@keyframes float-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
